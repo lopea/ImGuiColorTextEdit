@@ -924,7 +924,16 @@ void TextEditor::Render()
 				ImVec2 vend(lineStartScreenPos.x + mTextStart + ssend, lineStartScreenPos.y + mCharAdvance.y);
 				drawList->AddRectFilled(vstart, vend, mPalette[(int)PaletteIndex::Selection]);
 			}
-
+      else
+      {
+        //draw text background
+        drawList->AddRectFilled(
+            {lineStartScreenPos.x + mTextStart, lineStartScreenPos.y},
+            {lineStartScreenPos.x + TextDistanceToLineStart(lineEndCoord) + mTextStart,
+             lineStartScreenPos.y + mCharAdvance.y},
+            0xFF000000
+        );
+      }
 			// Draw breakpoints
 			auto start = ImVec2(lineStartScreenPos.x + scrollX, lineStartScreenPos.y);
 
