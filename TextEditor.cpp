@@ -2990,7 +2990,10 @@ const TextEditor::LanguageDefinition& TextEditor::LanguageDefinition::GLSL()
  "samplerCubeArray",
  "samplerCubeArrayShadow",
  "isamplerCubeArray",
- "usamplerCubeArray"
+ "usamplerCubeArray",
+ "float",
+ "int",
+ "double",
 		};
 		for (auto& k : keywords)
 			langDef.mKeywords.insert(k);
