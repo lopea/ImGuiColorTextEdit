@@ -2197,7 +2197,7 @@ void TextEditor::ColorizeRange(int aFromLine, int aToLine)
 			if (hasTokenizeResult == false)
 			{
 				// todo : remove
-				//printf("using regex for %.*s\n", first + 10 < last ? 10 : int(last - first), first);
+				//printf("using regex for %.*s\n", first + 10 < last_ ? 10 : int(last_ - first), first);
 
 				for (auto& p : mRegexList)
 				{
